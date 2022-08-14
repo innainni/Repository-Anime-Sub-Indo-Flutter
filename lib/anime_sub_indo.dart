@@ -108,8 +108,8 @@ class AnimeSubIndo implements IRepository {
   }
 
   @override
-  bool isValidToWatch(double currentVersion) {
-    var submitVersion = _configApp.submitVersion!.toDouble();
+  bool isValidToWatch(int currentVersion) {
+    var submitVersion = _configApp.submitVersion!;
     var isValid = currentVersion < submitVersion;
     return _configApp.isCanWatch == true && isValid ||
         _configApp.newVersionHasRelease == true;
