@@ -30,5 +30,5 @@ abstract class IRepository {
       String episodeExternalId, String type, String source);
   //fcm
   Future<void> addFcmToken(String token);
-  bool isValidToWatch(int currentVersion);
+  bool isValidToWatch(double currentVersion);
 }
